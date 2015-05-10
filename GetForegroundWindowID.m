@@ -1,7 +1,7 @@
 #include <Cocoa/Cocoa.h>
 #include <CoreGraphics/CGWindow.h>
 
-int get_front_window_pid(void) {
+int get_front_window_id(void) {
     int pid;
     CFArrayRef windows = CGWindowListCopyWindowInfo(kCGWindowListOptionOnScreenOnly, kCGNullWindowID);
     CFIndex i, n;
@@ -23,5 +23,5 @@ int get_front_window_pid(void) {
 }
 
 int main(int argc, char **argv) {
-    printf("%d\n", get_front_window_pid());
+    printf("%d\n", get_front_window_id());
 }
